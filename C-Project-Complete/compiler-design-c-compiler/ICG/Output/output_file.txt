@@ -1,0 +1,35 @@
+parser.y:362.27-386.50: warning: unused value: $3
+func begin main
+t0 = 3
+t1 = 2
+L0:
+t2 = x > y
+IF not t2 GoTo L1
+refparam "hello world"
+refparam result
+call printf, 1
+GoTo L0:
+L1:
+func end
+
+PASSED: ICG Phase
+                              PRINTING SYMBOL TABLE
+                               ______________
+Symbol Name |           Class |       Type |      Value |   Line No. |   Nesting Count | Params Count |
+________________________________________________________________________________________________________________________
+         x |      Identifier |        int |          3 |          5 |           99999 |         -1 |
+         y |      Identifier |        int |          2 |          5 |           99999 |         -1 |
+      main |        Function |       void |            |          3 |            9999 |          0 |
+     while |         Keyword |            |            |          6 |            9999 |         -1 |
+       int |         Keyword |            |            |          5 |            9999 |         -1 |
+      void |         Keyword |            |            |          3 |            9999 |         -1 |
+    printf |        Function |            |            |          7 |            9999 |         -1 |
+
+
+                              PRINTING CONSTANT TABLE
+                               ______________
+constant name |            Type
+______________________________________________________________________________________________________________
+"hello world" | String Constant
+         2 | Number Constant
+         3 | Number Constant

@@ -1,0 +1,17 @@
+PREFIX: -+a*b-c/def
+POSTFIX: abcde/-*+f-
+### THREE ADDRESS CODE GENERATION ###
+t1 := d / e
+t2 := c - t1
+t3 := b * t2
+t4 := a + t3
+t5 := t4 - f
+The quadruple for the expression 
+ OP | ARG 1 |ARG 2 |RESULT  
+ /   |  d   |  e  | t(1)
+ -   | t(1) | (-) | t(2)
+ +   |  c   | t(2)| t(3)
+ *   |  b   | t(3)| t(4)
+ +   |  a   | t(4)| t(5)
+ -   |  f   | (-) | t(6)
+ +   | t(5) | t(6)| t(7)
