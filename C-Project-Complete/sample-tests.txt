@@ -1,0 +1,71 @@
+//1.1 Normal
+
+
+int main() {
+    int a = 5;
+    int b = 10;
+    int c = a + b;
+    printf("The sum of %d and %d is %d\n", a, b, c);
+    return 0;
+}
+
+
+//1.2 error
+
+#include <stdio.h>
+
+int main() {
+    int a = 5;
+    int b = 10;
+    int c = a + b;
+    printf("The sum of %x& and %d is %d\n", a, b, c); // introducing invalid token %x&
+    return 0;
+}
+
+
+
+//2. icg
+#include<stdio.h>
+int main()
+{
+    int a, b;
+    char c;
+    for(a = 0; a < 29; a++)
+    {
+        if(a < 15) {
+            printf("Hello World");
+        }
+    }
+    int x = a + b;
+    // Single Line Comment
+    /* This is a 
+       multi-line comment */ 
+       
+    int var1;
+    char var2;
+    printf("%d",x);
+}
+
+
+#include <stdio.h>
+
+void main()
+{
+    int x=3,y=2;
+    while(x>y){
+        printf("hello world");
+        x--;
+    }
+
+}
+
+
+//3
+
+t1 = 5
+t2 = 6
+t3 = t1 + t2
+
+//4
+
+a+b*(c-d/e)-f
